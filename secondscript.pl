@@ -4,7 +4,8 @@
 #
 # By Angel 'angvp' Velásquez <angvp@archlinux.org>
 
-@a = (1, 2, 3, 4, 5);
+#@a = (1, 2, 3, 4, 5); # Old fashion way
+@a = 1 ... 5; # trick that I've just discovered :)
 print "These are the pair numbers: ";
 # This is a loop with the slice of the pair elements
 foreach $value (@a[1,3]) {
