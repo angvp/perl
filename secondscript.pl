@@ -11,8 +11,8 @@ print "These are the pair numbers: ";
 foreach $value (@a[1,3]) {
     print "$value ";
 }
-# This is a loop with the slice of unpair elements
-print "\nThese are the unpair numbers: ";
+# This is a loop with the slice of odd elements
+print "\nThese are the odd numbers: ";
 foreach $value (@a[2,4]) {
     print "$value ";
 }
