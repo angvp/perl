@@ -4,9 +4,12 @@
 #
 # By Angel 'angvp' Velásquez <angvp@archlinux.org>
 #
-$a = 'Hola mundo'; # this is a string variable 
-@a = (1, 2, 3); # This is an array
-%a = ('a' => 83, 'b' => '86'); # This is a hash
+
+use strict;
+
+my $a = 'Hola mundo'; # this is a string variable 
+my @a = (1, 2, 3); # This is an array
+my %a = ('a' => 83, 'b' => '86'); # This is a hash
 print "Let's print the var of \$a: ".$a."\n";
 print "Let's print the value of \$a[1]: ".$a[1]."\n";
 print "And then the value of 'a' and 'b' on \%a: ".$a{'a'}." ".$a{'b'}."\n";

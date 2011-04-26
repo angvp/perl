@@ -3,18 +3,20 @@
 # arrays and hashes, the thing is to know a little bit validators 
 #
 # By Angel 'angvp' Velásquez <angvp@archlinux.org>
+
+use strict;
+
 #########################
 ## undef with variables #
 #########################
-
-$a = undef;
+my $a = undef;
 if (defined($a)) {
     print "\$a is defined with the value: ",$a;
 }
 else {
     print "\$a isn't defined\n";
 }
-$a = 'THIS IS SPARTAAAAAAAAA';
+my $a = 'THIS IS SPARTAAAAAAAAA';
 if (defined($a)) {
     print "\$a is defined with the value: ",$a,"\n";
 }
@@ -26,7 +28,7 @@ else {
 ## undef with arrays #
 ######################
 
-@a = 1...10;
+my @a = 1...10;
 print "The length of this array \@a is: ", scalar(@a), "\n";
 $a[3] = undef;
 if(defined($a[3])) {
@@ -42,7 +44,7 @@ print "The length of the array \@a is: ", scalar(@a), "\n";
 ## undef with hashs  #
 ######################
 
-%a = ('name' => 'Angel', 'lastname' => 'Velásquez', 'middlename' => 'Rafael');
+my %a = ('name' => 'Angel', 'lastname' => 'Velásquez', 'middlename' => 'Rafael');
 print "The keys of the hash \%a are: ";
 print keys %a, "\n";
 # let's undef the hash

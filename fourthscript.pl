@@ -6,13 +6,15 @@
 #
 # By Angel 'angvp' Velásquez <angvp@archlinux.org>
 
+use strict;
 use DBI;
-$dbh = DBI->connect('DBI:mysql:pruebas', 'root', ''
+
+my $dbh = DBI->connect('DBI:mysql:pruebas', 'root', ''
                ) || die "Error: $DBI::errstr";
-$sql = 'SELECT * FROM tabla';
+my $sql = 'SELECT * FROM tabla';
 $dbh->prepare($sql);
-$query = $dbh->selectall_hashref($sql, 'id');
-foreach $id (keys %$query) {
+my $query = $dbh->selectall_hashref($sql, 'id');
+foreach my $id (keys %$query) {
     print $query->{$id}->{'descripcion'}."\n";
 }
 $dbh->disconnect();
